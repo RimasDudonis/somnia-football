@@ -15,4 +15,4 @@ The game is available only in the browser. The mobile version is not supported y
 ➡️ Right Arrow — move right
 
 Try to avoid obstacles and kick the ball as many times as you can!
-![Gameplay Screenshot](frontend\images\screen.JPG)
+![Gameplay Screenshot](frontend/images/screen.JPG)
