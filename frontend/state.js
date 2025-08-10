@@ -1,0 +1,130 @@
+export const canvas = document.getElementById("gameCanvas");
+
+export const state = {
+  currentSessionId: null,
+  isGameOver: false,
+  keys: { left: false, right: false },
+  playerState: "idle",
+  kickTimeout: null,
+  ballCapturedByBeam: false,
+  ballReleased: false,
+  brickDropDelay: 0,
+  animationFrameId: null,
+  soundEnabled: true,
+  kickCount: 0,
+  score: 0,
+  playerEventActive: false,
+  neutralEventActive: false,
+  playerEvents: ["ufo", "crow", "teleport"],
+  neutralEvents: ["cat", "dinoCar", "bird"],
+
+  cat: {
+  x: canvas.width,
+  y: canvas.height - 400,
+  width: 57,
+  height: 40,
+  speed: 2,
+  visible: false,
+  frame: 0,
+  frameTimer: 0,
+  frameInterval: 15,
+  },
+
+  bird: {
+  x: -100,
+  y: canvas.height - 600,
+  width: 65,
+  height: 60,
+  speed: 3,
+  visible: false,
+  frame: 0,
+  frameTimer: 0,
+  frameInterval: 15,
+  },
+
+  dinoCar: {
+  x: canvas.width,
+  y: canvas.height - 100,
+  width: 283,
+  height: 200,
+  speed: 3,
+  visible: false,
+  frame: 0,
+  frameTimer: 0,
+  frameInterval: 12,
+  },
+
+  screenShake: {
+  active: false,
+  intensity: 4,
+  duration: 240,
+  timer: 0,
+  },
+
+  teleport: {
+  x: 0,
+  y: canvas.height - 550,
+  width: 80,
+  height: 100,
+  frame: 0,
+  frameTimer: 0,
+  frameInterval: 6,
+  visible: false,
+  active: true,
+  respawnTimer: 0,
+  },
+
+  player: {
+    x: canvas.width / 2 - 36,
+    y: canvas.height - 180,
+    width: 84,
+    height: 174,
+    speed: 5,
+  },
+
+  ball: {
+    x: canvas.width / 2,
+    y: canvas.height - 300,
+    radius: 20,
+    vy: -8,
+    vx: 0,
+    gravity: 0.3,
+    bounce: -16,
+    visible: true,
+  },
+
+  crow: {
+    x: canvas.width,
+    y: 40,
+    width: 60,
+    height: 60,
+    flySpeed: 2,
+    flying: false,
+    frame: 0,
+    frameTimer: 0,
+    frameInterval: 10,
+  },
+
+  brick: {
+    x: 0,
+    y: 0,
+    width: 25,
+    height: 15,
+    vy: 4,
+    active: false,
+  },
+
+  ufo: {
+    x: -100,
+    y: 50,
+    width: 100,
+    height: 85,
+    speedX: 3,
+    state: "hidden",
+    pauseTime: 0,
+    beamTime: 0,
+  },
+
+  brickPlanned: false,
+  brickTriggerX: 0,
+};

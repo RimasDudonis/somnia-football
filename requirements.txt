@@ -1,0 +1,7 @@
+fastapi~=0.115.12
+uvicorn[standard]
+eth-account~=0.13.7
+eth-utils~=5.3.0
+python-dotenv~=1.1.0
+cachetools~=5.5.2
+slowapi~=0.1.9

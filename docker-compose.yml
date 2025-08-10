@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  somniafootball:
+    build: .
+    container_name: somniafootball
+    restart: always
+    ports:
+      - "8002:80"
+    environment:
+      - SERVER_SIGNING_KEY=${SERVER_SIGNING_KEY}

@@ -1,0 +1,187 @@
+body {
+  font-family: 'Delius', cursive, monospace;
+  margin: 0;
+  background: #111;
+  color: white;
+  overflow: hidden;
+}
+
+canvas {
+  background: black;
+  display: none;
+  width: 35vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow:
+    0 0 25px rgba(255, 255, 255, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+#connectButton:hover {
+  background: #666;
+}
+
+#connectButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.game-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  z-index: 9999;
+}
+
+.leaderboard-box {
+  width: 80%;
+  border: 3px solid black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.leaderboard-list {
+  list-style: decimal;
+  padding-left: 20px;
+  text-align: left;
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#mainMenu {
+  width: 35vw;
+  height: 100vh;
+  background: url("images/menu_background.png") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.menu-button {
+  font-size: 24px;
+  padding: 12px 36px;
+  margin: 10px;
+  cursor: pointer;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+  background: #666;
+}
+
+.menu-window {
+  width: 600px;
+  height: 800px;
+  box-sizing: border-box;
+  background: url("images/menu_background.png") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border-radius: 12px;
+}
+
+.reload-message {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: normal;
+  color: red;
+  text-align: center;
+  z-index: 1000;
+}
+
+#score {
+  display: none;
+}
+
+.settings-box {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+  padding: 20px 30px;
+  color: white;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.wallet-name {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wallet-name:hover {
+  background: #666;
+}
+
+.your-score {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd700;
+}
